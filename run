@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./hot_reload.py . python test/server.py
