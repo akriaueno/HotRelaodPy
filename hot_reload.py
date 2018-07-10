@@ -7,7 +7,6 @@ from subprocess import Popen
 
 watch_dir = sys.argv[1]
 cmd = sys.argv[2:]
-print(cmd)
 watch_files = [os.fspath(py) for py in Path(watch_dir).glob('**/*.py')]
 file_mtimes = {f: os.stat(f).st_mtime for f in watch_files}
 p = Popen(cmd)
